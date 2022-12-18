@@ -58,16 +58,40 @@
 		3D905725294F0DB400E485D0 /* ListenUp */ = {
 			isa = PBXGroup;
 			children = (
+				3D90573D294F0E0500E485D0 /* Modules */,
 				3D905726294F0DB400E485D0 /* AppDelegate.swift */,
 				3D905728294F0DB400E485D0 /* SceneDelegate.swift */,
-				3D90572A294F0DB400E485D0 /* ViewController.swift */,
-				3D90572C294F0DB400E485D0 /* Main.storyboard */,
 				3D905732294F0DB700E485D0 /* Assets.xcassets */,
 				3D905734294F0DB700E485D0 /* LaunchScreen.storyboard */,
 				3D905737294F0DB700E485D0 /* Info.plist */,
 				3D90572F294F0DB400E485D0 /* ListenUp.xcdatamodeld */,
 			);
 			path = ListenUp;
+			sourceTree = "<group>";
+		};
+		3D90573D294F0E0500E485D0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3D90573F294F0E1900E485D0 /* Main */,
+				3D90573E294F0E1000E485D0 /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3D90573E294F0E1000E485D0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3D90573F294F0E1900E485D0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3D90572A294F0DB400E485D0 /* ViewController.swift */,
+				3D90572C294F0DB400E485D0 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,16 +318,19 @@
 				DEVELOPMENT_TEAM = FLSHCRRCN3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ListenUp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Listen Up";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eiarcode.ListenUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -322,16 +349,19 @@
 				DEVELOPMENT_TEAM = FLSHCRRCN3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ListenUp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Listen Up";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eiarcode.ListenUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
