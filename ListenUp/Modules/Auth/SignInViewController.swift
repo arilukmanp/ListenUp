@@ -30,6 +30,10 @@ class SignInViewController: UIViewController {
     
     
     // MARK: - Action
+    @IBAction func signInButtonTapped(_ sender: Any) {
+        showMainViewController()
+    }
+    
     @IBAction func signUpButtonTapped(_ sender: Any) {
         showSignUpViewController()
     }
