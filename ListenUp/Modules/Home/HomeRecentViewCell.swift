@@ -31,7 +31,6 @@ class HomeRecentViewCell: UITableViewCell {
     func setup() {
         thumbnailImageView.layer.cornerRadius = 4
         thumbnailImageView.layer.masksToBounds = true
-        thumbnailImageView.backgroundColor = .lightGray
     }
 
 }

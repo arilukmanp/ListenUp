@@ -28,6 +28,8 @@
 		3D905736294F0DB700E485D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D905734294F0DB700E485D0 /* LaunchScreen.storyboard */; };
 		3D905741294F234C00E485D0 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D905740294F234C00E485D0 /* Auth.storyboard */; };
 		3D905743294F239E00E485D0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D905742294F239E00E485D0 /* SignInViewController.swift */; };
+		3DD9A538298BD6200056C4E7 /* HomeNewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD9A537298BD6200056C4E7 /* HomeNewViewCell.swift */; };
+		3DD9A53A298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD9A539298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		3D905737294F0DB700E485D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D905740294F234C00E485D0 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		3D905742294F239E00E485D0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3DD9A537298BD6200056C4E7 /* HomeNewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewViewCell.swift; sourceTree = "<group>"; };
+		3DD9A539298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			children = (
 				3D4117AF2989582F000FA52E /* Home.storyboard */,
 				3D4117A32989527B000FA52E /* HomeViewController.swift */,
+				3DD9A537298BD6200056C4E7 /* HomeNewViewCell.swift */,
+				3DD9A539298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift */,
 				3D547976298AC5F400DE88DA /* HomeRecentViewCell.swift */,
 			);
 			path = Home;
@@ -254,8 +260,10 @@
 			files = (
 				3D547977298AC5F400DE88DA /* HomeRecentViewCell.swift in Sources */,
 				3D5B906D294F416E002D8B98 /* SignUpViewController.swift in Sources */,
+				3DD9A538298BD6200056C4E7 /* HomeNewViewCell.swift in Sources */,
 				3D90572B294F0DB400E485D0 /* MainViewController.swift in Sources */,
 				3D4117A8298953A5000FA52E /* ExploreViewController.swift in Sources */,
+				3DD9A53A298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift in Sources */,
 				3D905731294F0DB400E485D0 /* ListenUp.xcdatamodeld in Sources */,
 				3D4117A42989527B000FA52E /* HomeViewController.swift in Sources */,
 				3D547979298ACABB00DE88DA /* UIImageViewExtensions.swift in Sources */,
