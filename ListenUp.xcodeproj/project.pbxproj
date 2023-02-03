@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		10965C59781F7725559A8155 /* Pods_ListenUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4F0AC2813207CD82508603 /* Pods_ListenUp.framework */; };
+		3D19DEAB298CE4A9009159CB /* PodcastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19DEAA298CE4A9009159CB /* PodcastResponse.swift */; };
+		3D19DEAD298CE4B7009159CB /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19DEAC298CE4B7009159CB /* Podcast.swift */; };
 		3D4117A2298922DC000FA52E /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4117A1298922DC000FA52E /* UIViewControllerExtensions.swift */; };
 		3D4117A42989527B000FA52E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4117A32989527B000FA52E /* HomeViewController.swift */; };
 		3D4117A6298952A0000FA52E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4117A5298952A0000FA52E /* AccountViewController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D19DEAA298CE4A9009159CB /* PodcastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastResponse.swift; sourceTree = "<group>"; };
+		3D19DEAC298CE4B7009159CB /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		3D4117A1298922DC000FA52E /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3D4117A32989527B000FA52E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D4117A5298952A0000FA52E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 				8A4F0AC2813207CD82508603 /* Pods_ListenUp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D19DEA9298CE477009159CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D19DEAA298CE4A9009159CB /* PodcastResponse.swift */,
+				3D19DEAC298CE4B7009159CB /* Podcast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3D41179E2989224A000FA52E /* Extensions */ = {
@@ -162,6 +175,7 @@
 		3D905725294F0DB400E485D0 /* ListenUp */ = {
 			isa = PBXGroup;
 			children = (
+				3D19DEA9298CE477009159CB /* Models */,
 				3D41179E2989224A000FA52E /* Extensions */,
 				3D90573D294F0E0500E485D0 /* Modules */,
 				3D905726294F0DB400E485D0 /* AppDelegate.swift */,
@@ -327,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D547977298AC5F400DE88DA /* HomeRecentViewCell.swift in Sources */,
+				3D19DEAD298CE4B7009159CB /* Podcast.swift in Sources */,
 				3D5B906D294F416E002D8B98 /* SignUpViewController.swift in Sources */,
 				3DD9A538298BD6200056C4E7 /* HomeNewViewCell.swift in Sources */,
 				3D90572B294F0DB400E485D0 /* MainViewController.swift in Sources */,
@@ -339,6 +354,7 @@
 				3D4117AA298953B6000FA52E /* RadioViewController.swift in Sources */,
 				3D905743294F239E00E485D0 /* SignInViewController.swift in Sources */,
 				3D905729294F0DB400E485D0 /* SceneDelegate.swift in Sources */,
+				3D19DEAB298CE4A9009159CB /* PodcastResponse.swift in Sources */,
 				3D4117A2298922DC000FA52E /* UIViewControllerExtensions.swift in Sources */,
 				3D4117A6298952A0000FA52E /* AccountViewController.swift in Sources */,
 			);
