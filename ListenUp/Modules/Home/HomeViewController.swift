@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 class HomeViewController: UIViewController {
 
@@ -14,7 +16,6 @@ class HomeViewController: UIViewController {
     
     var newPodcasts: [Podcast] = []
     var recentPodcasts: [Podcast] = []
-    let defaultImageUrl = "https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=200&h=200.0&fit=crop"
 
 
     // MARK: - Lifecycle
@@ -81,7 +82,7 @@ extension HomeViewController: UITableViewDataSource {
             if (self.recentPodcasts.count > 0) {
                 let podcast = self.recentPodcasts[indexPath.item]
                 cell.numberLabel.text = String(format: "%02d", indexPath.row + 1)
-                cell.thumbnailImageView.image = nil
+                cell.thumbnailImageView.kf.setImage(with: URL(string: podcast.thumbnailArtworkUrl))
                 cell.titleLabel.text = podcast.trackName
                 cell.descriptionLabel.text = podcast.artistName
             }
@@ -104,7 +105,7 @@ extension HomeViewController: UICollectionViewDataSource {
         
         if (self.newPodcasts.count > 0) {
             let podcast = self.newPodcasts[indexPath.item]
-            cell.imageView.image = nil
+            cell.imageView.kf.setImage(with: URL(string: podcast.largeArtworkUrl))
             cell.titleLabel.text = podcast.trackName
             cell.descriptionLabel.text = podcast.artistName
         }

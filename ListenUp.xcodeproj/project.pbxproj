@@ -21,7 +21,6 @@
 		3D4117B429895852000FA52E /* Radio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4117B329895852000FA52E /* Radio.storyboard */; };
 		3D4117B72989586C000FA52E /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4117B62989586C000FA52E /* Account.storyboard */; };
 		3D547977298AC5F400DE88DA /* HomeRecentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547976298AC5F400DE88DA /* HomeRecentViewCell.swift */; };
-		3D547979298ACABB00DE88DA /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547978298ACABB00DE88DA /* UIImageViewExtensions.swift */; };
 		3D5B906D294F416E002D8B98 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5B906C294F416E002D8B98 /* SignUpViewController.swift */; };
 		3D905727294F0DB400E485D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D905726294F0DB400E485D0 /* AppDelegate.swift */; };
 		3D905729294F0DB400E485D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D905728294F0DB400E485D0 /* SceneDelegate.swift */; };
@@ -50,7 +49,6 @@
 		3D4117B329895852000FA52E /* Radio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Radio.storyboard; sourceTree = "<group>"; };
 		3D4117B62989586C000FA52E /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		3D547976298AC5F400DE88DA /* HomeRecentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentViewCell.swift; sourceTree = "<group>"; };
-		3D547978298ACABB00DE88DA /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		3D5B906C294F416E002D8B98 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3D905723294F0DB400E485D0 /* ListenUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListenUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D905726294F0DB400E485D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				3D4117A1298922DC000FA52E /* UIViewControllerExtensions.swift */,
-				3D547978298ACABB00DE88DA /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 				3DD9A53A298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift in Sources */,
 				3D905731294F0DB400E485D0 /* ListenUp.xcdatamodeld in Sources */,
 				3D4117A42989527B000FA52E /* HomeViewController.swift in Sources */,
-				3D547979298ACABB00DE88DA /* UIImageViewExtensions.swift in Sources */,
 				3D905727294F0DB400E485D0 /* AppDelegate.swift in Sources */,
 				3D4117AA298953B6000FA52E /* RadioViewController.swift in Sources */,
 				3D905743294F239E00E485D0 /* SignInViewController.swift in Sources */,
