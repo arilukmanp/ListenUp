@@ -6,5 +6,7 @@ target 'ListenUp' do
   use_frameworks!
 
   # Pods for ListenUp
+  pod 'Alamofire'
+  pod 'Kingfisher', '~> 7.0'
 
 end
