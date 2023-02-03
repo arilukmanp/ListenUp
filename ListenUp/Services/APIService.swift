@@ -9,13 +9,13 @@ import Foundation
 import Alamofire
 
 
-struct APIService {
+class APIService {
     static let shared: APIService = APIService()
     private init() { }
     
     let BASE_URL: String = "https://itunes.apple.com/search"
     
-    func getNewPodcast(completion: @escaping ([Podcast]) -> Void) {
+    func getNewPodcast(completion: @escaping (_ podcasts: [Podcast]) -> Void) {
         let parameters: [String: Any] = [
             "term": "programming",
             "media": "podcast",
@@ -34,7 +34,7 @@ struct APIService {
             }
     }
     
-    func getRecentPodcast(completion: @escaping ([Podcast]) -> Void) {
+    func getRecentPodcast(completion: @escaping (_ podcasts: [Podcast]) -> Void) {
         let parameters: [String: Any] = [
             "term": "swift",
             "media": "podcast",

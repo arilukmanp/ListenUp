@@ -12,12 +12,17 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var newPodcasts: [Podcast] = []
+    var recentPodcasts: [Podcast] = []
+    let defaultImageUrl = "https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=200&h=200.0&fit=crop"
+
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setup()
+        loadData()
     }
     
     
@@ -25,7 +30,21 @@ class HomeViewController: UIViewController {
     func setup() {
         tableView.dataSource = self
     }
-
+    
+    func loadData() {
+        APIService.shared.getNewPodcast(completion: handleResponseNewPodcast)
+        APIService.shared.getRecentPodcast(completion: handleResponseRecentPodcast)
+    }
+    
+    func handleResponseNewPodcast(_ podcasts: [Podcast]) {
+        self.newPodcasts = podcasts
+        self.tableView.reloadData()
+    }
+    
+    func handleResponseRecentPodcast(_ podcasts: [Podcast]) {
+        self.recentPodcasts = podcasts
+        self.tableView.reloadData()
+    }
 }
 
 
@@ -41,7 +60,7 @@ extension HomeViewController: UITableViewDataSource {
         case 0:
             return 1
         default:
-            return 7
+            return self.recentPodcasts.count
         }
     }
     
@@ -57,13 +76,15 @@ extension HomeViewController: UITableViewDataSource {
             
             return cell
         default:
-            let imageUrl = "https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=200&h=200.0&fit=crop"
             let cell = tableView.dequeueReusableCell(withIdentifier: "recent_cell_id", for: indexPath) as! HomeRecentViewCell
             
-            cell.numberLabel.text = String(format: "%02d", indexPath.row + 1)
-            cell.thumbnailImageView.loadFrom(URLAddress: imageUrl)
-            cell.titleLabel.text = "Title at row \(indexPath.row + 1)"
-            cell.descriptionLabel.text = "Description at row \(indexPath.row + 1)"
+            if (self.recentPodcasts.count > 0) {
+                let podcast = self.recentPodcasts[indexPath.item]
+                cell.numberLabel.text = String(format: "%02d", indexPath.row + 1)
+                cell.thumbnailImageView.image = nil
+                cell.titleLabel.text = podcast.trackName
+                cell.descriptionLabel.text = podcast.artistName
+            }
             
             return cell
         }
@@ -74,17 +95,19 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - Extensions: CollectionView DataSource
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.newPodcasts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let imageUrl = "https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=200&h=200.0&fit=crop"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_new_cell_id", for: indexPath) as! HomeNewCollectionViewCell
         
-        cell.imageView.loadFrom(URLAddress: imageUrl)
-        cell.titleLabel.text = "Track \(indexPath.row + 1)"
-        cell.descriptionLabel.text = "Description of Track \(indexPath.row + 1 )"
+        if (self.newPodcasts.count > 0) {
+            let podcast = self.newPodcasts[indexPath.item]
+            cell.imageView.image = nil
+            cell.titleLabel.text = podcast.trackName
+            cell.descriptionLabel.text = podcast.artistName
+        }
         
         return cell
     }
