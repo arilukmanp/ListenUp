@@ -14,6 +14,8 @@ class ExploreViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     var resultPodcast: [Podcast] = []
 
 
@@ -30,6 +32,9 @@ class ExploreViewController: UIViewController {
     func setup() {
         tableView.dataSource = self
         tableView.delegate = self
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
     }
     
     func loadData() {
