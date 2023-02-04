@@ -17,6 +17,7 @@ class ExploreViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     var resultPodcast: [Podcast] = []
+    var debounce: Timer?
 
 
     // MARK: - Lifecycle
@@ -38,7 +39,10 @@ class ExploreViewController: UIViewController {
     }
     
     func searchPodcast(_ term: String) {
-        APIService.shared.searchPodcast(term: term, completion: handleResponseSearchPodcast)
+        debounce?.invalidate()
+        debounce = Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false, block: { _ in
+            APIService.shared.searchPodcast(term: term, completion: self.handleResponseSearchPodcast)
+        })
     }
     
     func handleResponseSearchPodcast(_ podcasts: [Podcast]) {
