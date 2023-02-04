@@ -24,7 +24,6 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
 
         setup()
-        loadData()
     }
     
 
@@ -35,10 +34,11 @@ class ExploreViewController: UIViewController {
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
+        searchController.searchBar.delegate = self
     }
     
-    func loadData() {
-        APIService.shared.getNewPodcast(completion: handleResponseSearchPodcast)
+    func searchPodcast(_ term: String) {
+        APIService.shared.searchPodcast(term: term, completion: handleResponseSearchPodcast)
     }
     
     func handleResponseSearchPodcast(_ podcasts: [Podcast]) {
@@ -48,6 +48,7 @@ class ExploreViewController: UIViewController {
 }
 
 
+// MARK: - Extension: Cell Datasource
 extension ExploreViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.resultPodcast.count
@@ -69,8 +70,18 @@ extension ExploreViewController: UITableViewDataSource {
     }
 }
 
+
+// MARK: - Extension: Cell Delegate
 extension ExploreViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+
+// MARK: - Extension: SearchBar Delegate
+extension ExploreViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchPodcast(searchText)
     }
 }

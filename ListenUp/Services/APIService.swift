@@ -52,4 +52,23 @@ class APIService {
                 }
             }
     }
+    
+    func searchPodcast(term: String, completion: @escaping (_ podcasts: [Podcast]) -> Void) {
+        let parameters: [String: Any] = [
+            "term": term,
+            "media": "podcast",
+            "limit": 20
+        ]
+        
+        AF.request(BASE_URL, parameters: parameters)
+            .responseDecodable(of: PodcastResponse.self) { response in
+                switch response.result {
+                case .success(let podcastResponse):
+                    completion(podcastResponse.results)
+                case .failure(let error):
+                    print(error.errorDescription ?? error)
+                    completion([])
+                }
+            }
+    }
 }
