@@ -12,7 +12,7 @@ import Foundation
 extension String {
     var isValidEmail: Bool {
         let pattern = #"^\S+@\S+\.\S+$"#
-        let predicate = NSPredicate(format: "SELF MATCHES %@", pattern)
+        let predicate = NSPredicate(format: "SELF MATCHES %@ ", pattern)
         return predicate.evaluate(with: self)
     }
 }
@@ -21,11 +21,11 @@ extension String {
 // MARK: - Validate Password
 extension String {
     var isValidPassword: Bool {
-        // At least 8 characters + one capital letter + one lowercase letter + one digit
-        let pattern = #"(?=.{8,})"# + #"(?=.*[A-Z])"# + #"(?=.*[a-z])"# + #"(?=.*\d)"#
+        // At least one lowercase letter + one digit + one capital letter + 8 characters
+        let pattern = #"(?=.*[a-z])"# + #"(?=.*[0-9])"# + #"(?=.*[A-Z])"# + #".{8,}"#
 //        + one special character
 //        + #"(?=.*[ !$%&?._-])"#
-        let predicate = NSPredicate(format: "SELF MATCHES %@", pattern)
+        let predicate = NSPredicate(format: "SELF MATCHES %@ ", pattern)
         return predicate.evaluate(with: self)
     }
 }
