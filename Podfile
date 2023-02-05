@@ -8,5 +8,6 @@ target 'ListenUp' do
   # Pods for ListenUp
   pod 'Alamofire'
   pod 'Kingfisher', '~> 7.0'
+  pod 'IQKeyboardManagerSwift'
 
 end
