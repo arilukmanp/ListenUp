@@ -12,6 +12,8 @@
 		3D19DEAB298CE4A9009159CB /* PodcastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19DEAA298CE4A9009159CB /* PodcastResponse.swift */; };
 		3D19DEAD298CE4B7009159CB /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19DEAC298CE4B7009159CB /* Podcast.swift */; };
 		3D19DEB0298CEAA6009159CB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19DEAF298CEAA6009159CB /* APIService.swift */; };
+		3D2720BE2990CD450090190B /* Episode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2720BD2990CD450090190B /* Episode.storyboard */; };
+		3D2720C02990CD670090190B /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2720BF2990CD670090190B /* EpisodesViewController.swift */; };
 		3D4117A2298922DC000FA52E /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4117A1298922DC000FA52E /* UIViewControllerExtensions.swift */; };
 		3D4117A42989527B000FA52E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4117A32989527B000FA52E /* HomeViewController.swift */; };
 		3D4117A6298952A0000FA52E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4117A5298952A0000FA52E /* AccountViewController.swift */; };
@@ -42,6 +44,8 @@
 		3D19DEAA298CE4A9009159CB /* PodcastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastResponse.swift; sourceTree = "<group>"; };
 		3D19DEAC298CE4B7009159CB /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		3D19DEAF298CEAA6009159CB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3D2720BD2990CD450090190B /* Episode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Episode.storyboard; sourceTree = "<group>"; };
+		3D2720BF2990CD670090190B /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		3D4117A1298922DC000FA52E /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3D4117A32989527B000FA52E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D4117A5298952A0000FA52E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 				3D19DEAF298CEAA6009159CB /* APIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3D2720BC2990CD2B0090190B /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				3D2720BD2990CD450090190B /* Episode.storyboard */,
+				3D2720BF2990CD670090190B /* EpisodesViewController.swift */,
+			);
+			path = Episode;
 			sourceTree = "<group>";
 		};
 		3D41179E2989224A000FA52E /* Extensions */ = {
@@ -205,6 +218,7 @@
 		3D90573D294F0E0500E485D0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3D2720BC2990CD2B0090190B /* Episode */,
 				3D4117AE2989580A000FA52E /* Account */,
 				3D4117AD298957F6000FA52E /* Radio */,
 				3D4117AC298957EC000FA52E /* Explore */,
@@ -296,6 +310,7 @@
 			files = (
 				3D905741294F234C00E485D0 /* Auth.storyboard in Resources */,
 				3D4117B02989582F000FA52E /* Home.storyboard in Resources */,
+				3D2720BE2990CD450090190B /* Episode.storyboard in Resources */,
 				3D905736294F0DB700E485D0 /* LaunchScreen.storyboard in Resources */,
 				3D905733294F0DB700E485D0 /* Assets.xcassets in Resources */,
 				3D4117B429895852000FA52E /* Radio.storyboard in Resources */,
@@ -364,6 +379,7 @@
 				3DD9A53A298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift in Sources */,
 				3D905731294F0DB400E485D0 /* ListenUp.xcdatamodeld in Sources */,
 				3D4117A42989527B000FA52E /* HomeViewController.swift in Sources */,
+				3D2720C02990CD670090190B /* EpisodesViewController.swift in Sources */,
 				3D905727294F0DB400E485D0 /* AppDelegate.swift in Sources */,
 				3D4117AA298953B6000FA52E /* RadioViewController.swift in Sources */,
 				3D905743294F239E00E485D0 /* SignInViewController.swift in Sources */,
