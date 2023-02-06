@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import FeedKit
 
 
 class APIService {
@@ -70,5 +71,22 @@ class APIService {
                     completion([])
                 }
             }
+    }
+    
+    func loadEpisodes(url: String, completion: @escaping (_ episodes: [RSSFeedItem]) -> Void ) {
+        if let feedUrl = URL(string: url) {
+            let parser = FeedParser(URL: feedUrl)
+            parser.parseAsync { result in
+                switch result {
+                case .success(let feed):
+                    completion(feed.rssFeed?.items ?? [])
+                case .failure(let error):
+                    print(error.errorDescription ?? error)
+                    completion([])
+                }
+            }
+        } else {
+            completion([])
+        }
     }
 }
