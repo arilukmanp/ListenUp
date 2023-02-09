@@ -79,6 +79,9 @@ extension ExploreViewController: UITableViewDataSource {
 extension ExploreViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let podcast = resultPodcast[indexPath.row]
+        showEpisodesViewController(podcast: podcast)
     }
 }
 
