@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-np-9cg">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="episode_cell_id" rowHeight="143" id="inN-cN-0Tt" customClass="EposodeViewCell" customModule="ListenUp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="143"/>
@@ -74,6 +74,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="4rT-96-VaK" secondAttribute="bottom" priority="250" constant="20" id="pvm-vk-mAh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="1yJ-47-V3v" id="NXS-kI-gfz"/>
                                             <outlet property="descriptionLabel" destination="pCA-xE-K89" id="EUN-6T-UHt"/>
@@ -85,7 +86,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
                             <constraint firstItem="bMp-np-9cg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="QjS-CM-0OA"/>
                             <constraint firstItem="bMp-np-9cg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="d7A-F7-Hfm"/>
@@ -103,8 +104,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.054901960784313725" green="0.043137254901960784" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
