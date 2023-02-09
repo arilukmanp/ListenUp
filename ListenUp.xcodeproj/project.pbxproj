@@ -25,6 +25,7 @@
 		3D4117B72989586C000FA52E /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4117B62989586C000FA52E /* Account.storyboard */; };
 		3D547977298AC5F400DE88DA /* HomeRecentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D547976298AC5F400DE88DA /* HomeRecentViewCell.swift */; };
 		3D5B906D294F416E002D8B98 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5B906C294F416E002D8B98 /* SignUpViewController.swift */; };
+		3D72D1ED29951DBD00CBEF89 /* EposodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72D1EC29951DBD00CBEF89 /* EposodeViewCell.swift */; };
 		3D8A3473298F774800320862 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A3472298F774800320862 /* StringExtensions.swift */; };
 		3D905727294F0DB400E485D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D905726294F0DB400E485D0 /* AppDelegate.swift */; };
 		3D905729294F0DB400E485D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D905728294F0DB400E485D0 /* SceneDelegate.swift */; };
@@ -57,6 +58,7 @@
 		3D4117B62989586C000FA52E /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		3D547976298AC5F400DE88DA /* HomeRecentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentViewCell.swift; sourceTree = "<group>"; };
 		3D5B906C294F416E002D8B98 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3D72D1EC29951DBD00CBEF89 /* EposodeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EposodeViewCell.swift; sourceTree = "<group>"; };
 		3D8A3472298F774800320862 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		3D905723294F0DB400E485D0 /* ListenUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListenUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D905726294F0DB400E485D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				3D2720BD2990CD450090190B /* Episode.storyboard */,
 				3D2720BF2990CD670090190B /* EpisodesViewController.swift */,
+				3D72D1EC29951DBD00CBEF89 /* EposodeViewCell.swift */,
 			);
 			path = Episode;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				3D5B906D294F416E002D8B98 /* SignUpViewController.swift in Sources */,
 				3DD9A538298BD6200056C4E7 /* HomeNewViewCell.swift in Sources */,
 				3D184F3E298D42FE0025FEA6 /* ExploreViewCell.swift in Sources */,
+				3D72D1ED29951DBD00CBEF89 /* EposodeViewCell.swift in Sources */,
 				3D90572B294F0DB400E485D0 /* MainViewController.swift in Sources */,
 				3D4117A8298953A5000FA52E /* ExploreViewController.swift in Sources */,
 				3DD9A53A298BD64F0056C4E7 /* HomeNewCollectionViewCell.swift in Sources */,

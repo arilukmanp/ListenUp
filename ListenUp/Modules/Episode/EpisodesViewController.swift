@@ -9,6 +9,11 @@ import UIKit
 
 class EpisodesViewController: UIViewController {
 
+    // MARK: - Properties
+    @IBOutlet weak var episodeTableView: UITableView!
+    
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
