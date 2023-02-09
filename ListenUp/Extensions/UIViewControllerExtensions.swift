@@ -48,3 +48,15 @@ extension UIViewController {
         window?.rootViewController = viewController
     }
 }
+
+
+// MARK: - Show Episodes
+extension UIViewController {
+    func showEpisodesViewController(podcast: Podcast) {
+        let storyboard = UIStoryboard(name: "Episode", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "episode") as! EpisodesViewController
+        viewController.podcast = podcast
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
