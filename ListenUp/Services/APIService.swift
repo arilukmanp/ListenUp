@@ -77,12 +77,14 @@ class APIService {
         if let feedUrl = URL(string: url) {
             let parser = FeedParser(URL: feedUrl)
             parser.parseAsync { result in
-                switch result {
-                case .success(let feed):
-                    completion(feed.rssFeed?.items ?? [])
-                case .failure(let error):
-                    print(error.errorDescription ?? error)
-                    completion([])
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let feed):
+                        completion(feed.rssFeed?.items ?? [])
+                    case .failure(let error):
+                        print(error.errorDescription ?? error)
+                        completion([])
+                    }
                 }
             }
         } else {
